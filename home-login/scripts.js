@@ -76,7 +76,7 @@ function onSignIn(googleUser) {
           $(".data").css("display","none");
         });
       }
-  }
+  
 
 
 
