@@ -1,75 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-     integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" 
-     crossorigin="anonymous" > 
-    <title>GOLBUK-A complete mouth care</title>
-    <link rel="stylesheet" href="style.css"> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prateek's website</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
+
+
+
+<header class="header">
+  <a href="" class="logo">Prateek </a>
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    <li><a href="#pInfo">About Me</a></li>
+    <li><a href="#careerId">Career Goal</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#work-experience">Work Experience / Placements</a></li>
+    <li><a href="#skillsId">Skills</a></li>
+    <li><a href="#hobbiesId">Hobbies, Interests, and Achievements</a></li>
+  </ul>
+</header>
+
 <body>
-    <div class="container">
-        <div class="forms-container">
-                <div class="signin-signup">
-                    <form action="#" class="sign-in-form">
-                        <h2 class="title">Sign in</h2>
-                        <div class="input-field">
-                             <i class="fas fa-user"></i>  
-                             <input type="text" placeholder="Username"/>
-                        </div>
 
-                        <div class="input-field">
-                            <i class="fas fa-lock"></i>  
-                            <input type="password" placeholder="Password"/>
-                        </div>
-                        <input type="submit" class="btn solid" value="LOGIN">
-                        <p class="social-text">Or Sign in with</p>
-                        <div class="social-media">
-                            <a href="#" class="social-icon">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="social-icon">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="social-icon">
-                                <i class="fab fa-google"></i>
-                            </a>
-                            <a href="#" class="social-icon">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a> 
-                        </div>
-                    </form>
-                    <div class="signup-signup">
-                        <p class="text"> New User? </p>
-                        <input type="submit" class="btn solid" value="SIGN UP">
-                    </div>
-                </div>
-            <div class="panels-container">
-                <div class="panel left-panel">
-                    <img src="sample images/logo4.png" alt="image" class="image1">
-                    <p class="title"> Our Mission</p>
-                    <p2>Dr. Prachi Singh, BDS, MS Implant and Cosmetic Dentistry located 
-                        in Patna, focuses on providing state-of-the-art, gentle, and 
-                        quality dental care to patients of all ages to enhance their 
-                        oral health as well as their quality of life. Our mission is to 
-                        provide the highest levels of general, cosmetic, pediatric, and 
-                        family dental care to our patients while treating them like family.</p2>
+  <div class="splash-screen">
+      <img src="front.jpg" alt="Splash Screen">
+    </div> 
 
-                       <p3>
-                        With her education and expertise, Dr. Prachi Singh and her team 
-                        of dental health professionals offer world-class dental care 
-                        in a relaxed dental environment. We are focused on upholding a 
-                        commitment to quality while offering our patients the best and 
-                        quality dental services.
-                       </p3> 
-                </div>
-            </div>  
-        </div>    
-        <img src="sample images/image 1.jpg" alt="image" class="image2">
+  <main>
+    
+    <section class="parallax">
+      <div class="parallax-content">
+        <h1>Hello There!</h1>
+        <p>Welcome to my Portfolio website. </p>
+        <p>Please Scroll down to explore my website.</p>
+        <p>.</p>
+        <p>.</p>
+        <p>.</p>
+        <p>.</p>
+        <p>.</p>
+        <p>.</p>
+        <p>.</p>
+        <p>.</p>
+        <p>.</p>
+        <p>\/</p>
+      </div>
+    </section>
+    
+    <section class="personal-parallaxie">
+    <div id= "pInfo" class="personal-parallaxie-content">
+      <h1>About me</h1>
+      <ul>
+        <li>Name: Prateek</li>
+        <li>Email: Prateek2@liverpool.ac.uk</li>
+      </ul>
     </div>
-    <script scr="form.js"></script>
+</section>
+  <section class="career-parallax">
+    <div id="careerId" class="career-parallax-content">
+      <h1>Career Goal</h1>
+      <p>To become a web developer and work on exciting projects that challenge me and allow me to grow as a professional.</p>
+    </div>
+  </section>
+  
+    <section id="education" class="career-parallax">
+    <div class="career-parallax-content">
+      <h2>Education</h2>
+      <ul>
+        <li>Bachelor of Technology in Mechatronics Engineering, Manipal University, 2014-2018</li>
+        <li>Master of Science in Computer Science, University Of Liverpool , 2022-2023</li>
+      </ul>
+    </div>
+    </section>
+
+    <section id="work-experience" class="workEx">
+			<h1>Work Experience</h1>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Job Title</th>
+						<th>Company</th>
+						<th>Date Range</th>
+						<th>Job Description</th>
+            <th>Company's website</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Closer</td>
+						<td>Better.com</td>
+						<td>August 2020 - Dec 2021</td>
+						<td>Responsible for drawing final refinance mortgage documents in accordance with TILA/RESPA guidelines
+              accurately and within Constrained timelines with overall audit on Encompass and Doc Magic.</td>
+              <td>
+                <a href="https://better.co.uk/">Link</a>
+              </td>
+					</tr>
+					<tr>
+						<td>SAP-BW Consultant</td>
+						<td>Accenture Pvt Ltd.</td>
+						<td>August 2018 - July 2020</td>
+						<td>Provided resolution to incidents, service requests based on user request including maintenance, reconciliation and access request of business data reports to the user including creation and maintenance of process chains in SAP-BW environment.</td>
+            <td>
+              <a href="https://www.accenture.com/gb-en">Link</a>
+            </td>
+          </tr>
+          
+					</tbody>
+			</table>
+
+      <div class="table-column-instruction">
+        <h3>* Please Note That:- When the screen size is reduced In this case, we change the display of the table and its elements to block level elements, remove some of the borders to make the table more readable on smaller screens.</h3>
+      </div>
+
+		</section>
+
+    <section id= "skillsId" class="parallax">
+      <div class="parallax-content">
+      <h1>Skills</h1>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Python</li>
+        <li>Raspberry Pi</li>
+        <li>Arduino</li>
+        <li>Git</li>
+      </ul>
+    </div>
+    </section>
+
+    <section id= "hobbiesId" class="career-parallax">
+      <div class="career-parallax-content">
+      <h1>I consider myself an experiential omnivore :D</h1>
+      <ul>
+        <li>love to Bake and cook.</li>
+        <li>Playing guitar and singing.</li>
+        <li>Writing Poems</li>
+        <li>Solving Puzzles</li>
+        <li>Won first place in Robotic arm Making Competition</li>
+      </ul>
+    </div>
+    </section>
+  </main>
+  
 </body>
+
+<footer>
+
+  Last modification <!--#flastmod file="index.html" -->
+
+</footer>
+
 </html>
+
