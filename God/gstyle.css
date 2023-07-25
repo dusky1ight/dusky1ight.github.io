@@ -1,0 +1,400 @@
+@font-face {
+  font-family: 'tooneynoodle';
+  src: url(tooneynoodle.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'PfontDes';
+  src: url(PfontDes.ttf) format('truetype');
+}
+
+
+
+/* .button1 {
+  position:relative;
+	border-radius: 40px;
+	background-color: hsla(0, 100%, 34%, 0.822);
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: flex;
+	font-size: 40px;
+	margin: 20% 20% ;
+	cursor: pointer;
+	transition-duration: 0.4s;
+
+}
+.button2 {
+  position: relative;
+	border-radius: 30px;
+	background-color: #4caf4fc2;
+	border: none;
+	color: white;
+	padding: 100px 200px;
+	text-align: center;
+	text-decoration: none;
+	display: flex;
+	font-size: 104px;
+	margin: 4px 2px;
+	cursor: pointer;
+	transition-duration: 0.4s;
+
+}
+
+.button3 {
+  position: relative;
+	border-radius: 30px;
+	background-color: #421cecbd;
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: flex;
+	font-size: 24px;
+	margin: 4px 2px;
+	cursor: pointer;
+	transition-duration: 0.4s;
+
+} */
+body{  
+  background: linear-gradient(to left, #000000e8, rgb(0, 0, 0) 30%, rgba(5, 3, 3, 0.699) 65%, #000000b4 65%);
+}
+
+.button:hover {
+	background-color: #000405;
+	color: white;
+}
+
+#input-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: none;
+	  margin-top: 20px;
+    appearance: none;
+    color: rgb(253, 253, 253);
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    opacity: 0.7;
+    border: none;
+}
+
+#output-container {
+	margin-top: 20px;
+	font-size: 24px;
+}
+
+  
+.roll {
+    animation: roll 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+  
+@keyframes roll {
+    0% {
+      transform: rotateX(0) rotateY(0);
+    }
+    50% {
+      transform: rotateX(360deg) rotateY(360deg) translateX(10px) rotateZ(-20deg) scale(1.2);
+    }
+    75% {
+      transform: rotateX(360deg) rotateY(360deg) translateX(-10px) rotateZ(20deg) scale(0.8);
+    }
+    100% {
+      transform: rotateX(0) rotateY(0);
+    }
+}
+  
+
+#num-dice{
+    color: rgb(22, 1, 1);
+}
+
+#wrapper-kilas{
+  position: relative;
+}
+
+#dice-container{
+  display:inline-flex;
+  margin-top: 15%;
+  margin-bottom: 0%;
+  padding-bottom: 30%;
+  padding-top: 0%;
+  opacity: 0.5;
+  top: 30%;
+  height: 200%;
+  font-size: 100%;
+}
+
+
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.wrapper img {
+  display: block;
+  width: 100%;
+}
+
+
+.buttonWrapper{
+  background-color: rgba(255, 166, 0, 0);
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline:orange;
+  
+}
+
+.buttonWrapper .button {
+  font-family: "tooneynoodle";
+  margin: 0 0px;
+  background-color: #fff;
+  border: 10px solid #000;
+  padding: 10px 20px;
+  z-index: 2;
+  align-items: center;
+}
+
+.wrapper .button {
+  border-radius: 40px;
+	background-color: hsl(236, 97%, 48%);
+	border: none;
+	color: rgb(255, 255, 255);
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 37px;
+  font-family: "PfontDes";
+	margin: 4px 4px ;
+	cursor: pointer;
+	transition-duration: 0.4s;
+  z-index: 3;
+}
+
+.wrapper .button2 {
+  background-color: rgb(235, 66, 15);
+  border-radius: 40px;
+  border: none;
+	color: hsl(0, 0%, 98%);
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 40px;
+	margin: 4px 4px ;
+	cursor: pointer;
+	transition-duration: 0.4s;
+  z-index: 3;
+  font-family: "PfontDes";
+}
+.wrapper .button:hover::before {
+  background-color: rgb(6, 228, 6);
+  border-radius: 40px;
+  border: none;
+	color: rgb(231, 6, 6);
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 40px;
+	margin: 4px 4px ;
+	cursor: pointer;
+	transition-duration: 0.7s;
+  z-index: 2;
+
+}
+
+.wrapper .button:hover {
+  background-color: rgb(6, 228, 6);
+  border-radius: 40px;
+  border: none;
+	color: rgb(231, 6, 6);
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 40px;
+	margin: 4px 4px ;
+	cursor: pointer;
+	transition-duration: 0.7s;
+  z-index: 2;
+
+}
+.wrapper .button2:hover::before {
+  content: 'LEAVING SO SOON!! Do you really want to ';
+  background-color: rgb(240, 10, 10);
+  border-radius: 40px;
+  border: none;
+	color: rgb(0, 0, 0);
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 20px;
+	margin: 4px 4px ;
+	cursor: pointer;
+	transition-duration: 0.6s;
+  z-index: 2;
+}
+.wrapper .button2:hover {
+  background-color: rgb(240, 10, 10);
+  border-radius: 40px;
+  border: none;
+	color: rgb(0, 0, 0);
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 40px;
+	margin: 4px 4px ;
+	cursor: pointer;
+	transition-duration: 0.6s;
+  z-index: 2;
+}
+
+.wrapper .button3 {
+  background-color: rgba(73, 73, 180, 0.651);
+  border-radius: 30px;
+  border: none;
+	color: white;
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 40px;
+	margin: 4px 4px ;
+	cursor: pointer;
+	transition-duration: 0.4s;
+}
+
+.button4 {
+  display: none;
+  font-family: "tooneynoodle";
+  background-color: rgb(7, 206, 17);
+  border-radius: 40px;
+  border: none;
+	color: rgb(255, 255, 255);
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 40px;
+	margin: 4px 4px ;
+	cursor: pointer;
+	transition-duration: 0.4s;
+}
+
+
+.button5{
+  display: none;
+  font-family: "tooneynoodle";
+  background-color: rgb(223, 63, 18);
+  border-radius: 49px;
+  border: none;
+	color: rgb(238, 238, 238);
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 40px;
+	margin: 4px 4px ;
+	cursor: pointer;
+	transition-duration: 0.4s;
+}
+
+
+.button5:hover::before {
+  content: "ARE YOU SURE ? You want to ";
+  font-family: "PfontDes";
+  background-color: rgba(0, 0, 0, 0.726);
+  border-radius: 30px;
+  border: none;
+	color: rgb(238, 238, 238);
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 40px;
+	margin: 4px 4px ;
+	cursor: pointer;
+	transition-duration: 0.4s;
+}
+
+
+.button4:hover {
+
+  font-family: "tooneynoodle";
+  background-color: rgba(0, 0, 0, 0.726);
+  border-radius: 30px;
+  border: none;
+	color: rgb(238, 238, 238);
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 40px;
+	margin: 4px 4px ;
+	cursor: pointer;
+	transition-duration: 0.4s;
+}
+
+
+/* .wrapper button {
+  position: absolute;
+  z-index: 25;
+}
+.wrapper button1 {
+  top: 10%;
+  left: 10%;
+}
+
+.wrapper .button2 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+@media screen and (max-width: 768px) {
+  .wrapper{
+    bottom: 10px;
+  }
+
+  .wrapper button {
+    padding: 8px 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .wrapper {
+    bottom: 0;
+  }
+
+  .wrapper button {
+    padding: 6px 12px;
+  }
+}
+
+
+.inputClass{
+  font-size: 40px;
+  font-family: "tooneynoodle";
+  color: rgb(243, 243, 243);
+}
+.labelRed{
+  font-family: "tooneynoodle";
+  font-size: 40px;
+}
+
+
+.button {
+  background-color: rgb(240, 71, 20);
+  border-radius: 30px;
+  border: none;
+	color: white;
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+  font-family: "PfontDes";
+	font-size: 40px;
+	margin: 4px 4px ;
+	cursor: pointer;
+	transition-duration: 0.4s;
+}

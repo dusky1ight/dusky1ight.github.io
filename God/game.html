@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="PRATEEK 201668474">
+	<title>Dice Game</title>
+	<link rel="stylesheet" type="text/css" href="gstyle.css">
+	<link rel = "stylesheet"  href="tooneynoodle.ttf">
+</head>
+<body>
+	
+	<div id="input-form">
+		<label for="num-dice" class="labelRed">Enter the number of dice (between 3 and 6):</label>
+		<input type="numeric" id="num-dice" name="num-dice" class="inputClass">
+		<button class="button" id="submit-button" class = "button">Submit</button>
+	</div>
+
+	<button class="button4" id="helpless-button" data-inline="true" onclick="rollDice()"> Roll Again?  </button>
+	<button class="button5" id="Release-button" onclick="quitGame()"> Quit Game  </button>
+	<div id="output-container2"></div>
+	<div id="output-container"></div>
+	<div id="score-container"></div>
+	
+    <div id="image-container"></div>
+	<div id="wrapper-kilas" class="wrapper">
+		
+			<div id="dice-container" class="buttonWrapper">
+				<button class="button" id="start-button">Start Game</button>
+				<button class="button2" id="quit-button" onclick="exitGame()">Quit</button>
+			</div>
+	</div>
+	  
+
+	<script src="game.js"></script>
+</body>
+</html>
