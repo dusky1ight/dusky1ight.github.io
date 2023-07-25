@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PostMinimum API Client</title>
+ <style>
+  <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>HTTP Request Form</title>
+    
+   <style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: black;
+        color: white;
+    }
+
+    h1, h2 {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    ul {
+        margin: 20px 0;
+        padding: 0 0 0 40px;
+    }
+
+    li {
+        margin: 10px 0;
+    }
+
+    pre {
+        font-size: 14px;
+        background-color: #f8f8f8;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        color: black;
+        padding: 10px;
+    }
+
+   
+    .form-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        margin: 20px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 4px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .form-container select, .form-container input[type="text"], .form-container textarea {
+        font-size: 16px;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        margin-bottom: 20px;
+        width: 100%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container select:focus, .form-container input[type="text"]:focus, .form-container textarea:focus {
+        outline: none;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .form-container button[type="button"] {
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-bottom: 20px;
+        transition: background-color 0.3s ease;
+    }
+
+    .form-container button[type="button"]:hover {
+        background-color: #3e8e41;
+    }
+   button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+    #response-container {
+        width: calc(100% - 40px);
+        margin: 20px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 4px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #response-container h2 {
+        margin-bottom: 10px;
+    }
+
+    #response-body {
+        font-size: 14px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 10px;
+        white-space: pre-wrap;
+    }
+
+summary {
+  font-weight: bold;
+  font-size: 1.2em;
+  cursor: pointer;
+  outline: none;
+  color: white;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+
+
+summary:active {
+  color: red;
+}
+
+summary:hover {
+
+  color: red;
+}
+
+
+    @media only screen and (min-width: 600px) {
+        .form-container {
+            width: 40%;
+        }
+
+        #response-container {
+            width: calc(60% - 40px);
+        }
+    }
+</style>
+
+
+</head>
+<body>
+    <h1>PostMinimum API Client </h1>
+
+    <h2>Resources and JSON format</h2>
+    <h2>To Test any Other API's</h2>
+    <h2> Simply change the baseURL </h2>
+    <form>
+        <label for="http-method">HTTP Method:</label>
+        <select id="http-method">
+            <option value="">-Select the HTTP Method-</option>
+            <option value="GET">GET</option>
+            <option value="POST">POST</option>
+            <option value="PUT">PUT</option>
+            <option value="DELETE">DELETE</option>
+        </select>
+        <label for="url">BaseURL:</label>
+        <input type="text" id="disabledInput" value="https://student.csc.liv.ac.uk/~hspprate/v1" disabled>
+        <label for="resource">Resource:</label>
+        <input type="text" id="resource" placeholder="Enter resource here" size="80">
+
+        <div id="request-body-fields">
+            <label for="request-body">Request Body:</label>
+            <textarea id="request-body" placeholder="Enter JSON request body here" cols="80" rows="5"></textarea>
+        </div>
+
+        <button type="button" onclick="sendRequest()">Send Request</button>
+    </form>
+    
+    <button type="button" onclick="toggleDisabled()">click here to change base URL</button>
+    <h2>Response</h2>
+    <p>Status Code: <span id="status-code"></span></p>
+    <pre id="response-body"></pre>
+
+    <button type="button" onclick="clearResponse()">Clear Response</button>
+
+<details>
+
+  <summary>Click here for Resource Guide</summary>
+  <ul>
+  
+  
+<li>HTTP Method:POST&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resource: /player</li>
+    <pre>This Method ADDS new player to an existing team. it takes a JSON request body.<pre>Example of JSON request body <pre>
+{
+  "surname": "Deven",
+  "given_names": "Johno",
+  "nationality": "British",
+  "date_of_birth": "1999-09-09",
+  "team_id": "2"
+}</pre></pre></pre>
+<pre> Response from the Server
+  <pre>Player added</pre></pre></li>
+  
+  
+<li>HTTP Method:PUT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resource: /player/{player_id}</li>
+    <pre>This Method UPDATES the information of an existing Player. it takes a JSON request body.<pre>Example of JSON request body <pre>
+{
+  "surname": "Deven",
+  "given_names": "Johno",
+  "nationality": "British",
+  "date_of_birth": "1999-09-09",
+  "team_id": "2"
+}</pre></pre></pre>
+<pre> Response from the Server
+  <pre>Player updated</pre></pre></li>
+  
+  
+  <li>HTTP Method:DELETE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resource: /player/{player_id}</li>
+    <pre>This Method DELETES all the information about the specified player of a team(in form of player_id)<pre>Response from the server<pre>
+   {
+   Player deleted
+  }
+  </pre></pre></pre></li>
+  
+   <li>HTTP Method:GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resource: /teams</li>
+    <pre>This Method Fetches all the information about the existing teams and latest average age of the team<pre>Example Result<pre>
+    {
+    "team_id": "1",
+    "name": "Arsenal",
+    "sport": "Football",
+    "avg_age": "41.00",
+    "players_uri": "/team/1/player"
+  }
+  
+  </pre></pre></pre></li>
+    <li>HTTP Method:GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resource: /team/{team_id}/players</li>
+    <pre>This Method Fetches all the information of all Player in a particular teams(team_id) <pre>Example Result<pre>
+   
+  {
+    "player_id": "10",
+    "team_id": "1",
+    "GivenName": "wicky",
+    "Surname": "Prateek",
+    "Nationality": "british",
+    "DOB": "1990-01-01"
+  }
+
+  </pre></pre></pre></li>
+    <li>HTTP Method:GET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resource: /player/{player_id}</li>
+    <pre>This Method Fetches all the details of an existing player of a team; <pre>Example Result<pre>
+    
+  {
+    "player_id": "17",
+    "team_id": "2",
+    "GivenName": "John",
+    "Surname": "Doe",
+    "Nationality": "American",
+    "DOB": "1990-01-01"
+  }
+
+  </pre></pre></pre></li>
+
+
+
+  </ul>
+</details>
+
+
+<script src="interface.js"></script>
+</body>
+</html>

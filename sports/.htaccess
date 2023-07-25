@@ -1,0 +1,20 @@
+RewriteCond %{REQUEST_METHOD} GET
+RewriteRule ^team/(\d+)/players$ readPlayer.php?team_id=$1 [L]
+
+RewriteCond %{REQUEST_METHOD} GET
+RewriteRule ^teams$ read.php [L]
+
+
+RewriteCond %{REQUEST_METHOD} GET
+RewriteRule ^player/(\d+)$ realPlayer.php?player_id=$1 [L]
+
+
+RewriteCond %{REQUEST_METHOD} POST
+RewriteRule ^player$ addPlayer.php [QSA,L]
+
+
+RewriteCond %{REQUEST_METHOD} DELETE
+RewriteRule ^player/(\d+)$ deletePlayer.php?player_id=$1 [QSA,L]
+
+RewriteCond %{REQUEST_METHOD} PUT
+RewriteRule ^player/(\d+)$ updatePlayer.php?player_id=$1 [L]
