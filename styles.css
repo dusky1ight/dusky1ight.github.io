@@ -1,0 +1,525 @@
+/* Global Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.header {
+  background-color: rgba(0, 61, 92, 0.637);
+  box-shadow: 1px 1px 2px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  color: #f2f2f285;
+}
+
+.header ul {
+
+  margin: 0;
+  padding: 0;
+  list-style-type: style none;;
+  overflow:scroll;
+  background-color: #fff;
+  color: #d61e1e;
+}
+
+.header li a {
+  display: flex;
+  background-color: rgb(0, 62, 92);
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+  color: #f2f2f2;
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #41c82f78;
+  color: rgb(0, 61, 92);
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  align-items: center;
+  font-size: 3.5em;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #f2f2f2;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+  font-family: 'Roboto' sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2 ease-in-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 768px) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+
+
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+/* Main Sections */
+main {
+    padding-top: 0px;
+  }
+
+section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.personal-parallaxie{
+    height: 120vh;
+    display: flex;
+    background-color: rgba(231, 202, 202, 0.897);
+    background-position: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.personal-parallaxie-content{
+  padding: 100px;
+  text-align: center;
+  color: #fff;
+}
+.personal-parallaxie h1{
+  font-size: 60px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #1d0b0b98;
+}
+.personal-parallaxie ul{
+  list-style: none;
+  font-size: 35px;
+  text-align: center;
+  line-height: 2;
+  color: #000000;
+}
+
+.personal-parallaxie p{
+  list-style: none;
+  font-size: 35px;
+  text-align: center;
+  line-height: 2;
+  color: #070000;
+}
+
+section h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+section ul {
+    list-style: none;
+    font-size: 20px;
+    text-align: center;
+    line-height: 2;
+}
+
+#education {
+    background-color: rgba(8, 158, 28, 0.849);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: #f2f2f2;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-size: 30px;
+  }
+
+
+/*
+#work-experience {
+    background-image: url("https://source.unsplash.com/1080x1080/?random");
+    background-size: cover;
+    background-position: center;
+    color: #f2f2f2cc;
+}
+   */
+
+  .parallax {
+    height: 100vh;
+    background-color: rgba(226, 115, 12, 0.89);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #f2f2f2;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+  }
+
+  .parallax-content {
+    padding: 100px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .parallax h1 {
+    font-size: 60px;
+    margin: 0;
+  }
+
+  .parallax p {
+    font-size: 30px;
+    margin: 0;
+  }
+
+
+.career-parallax {
+    height: 100vh;
+    background-color: rgba(23, 170, 43, 0.698);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #f2f2f2;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+  }
+
+  .career-parallax-content {
+    padding: 150px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .career-parallax h1 {
+    font-size: 48px;
+    margin: 0;
+  }
+
+  .career-parallax li {
+    font-size: 36px;
+    margin: 0;
+    font-family: sans-serif;
+  }
+  .career-parallax p {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  
+
+
+.skills {
+    background-image: url('front.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
+
+.skills-content {
+    padding: 50px;
+    text-align: center;
+    color: #f2f2f2
+  }
+
+.skills h1 {
+    font-size: 48px;
+    margin: 0;
+    color: #f2f2f2;
+  }
+
+.skills ul {
+    font-size: 24px;
+    margin: 0;
+    color: #f2f2f2;
+  }
+
+
+
+
+
+
+
+/* Set the height and width of the splash screen */
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+/* Set the image to be centered on the screen */
+.splash-screen img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Add an animation to fade out the splash screen after a set time */
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  30%
+  {
+    opacity: 0.9;
+  }
+  50%
+  {
+    opacity: 0.7;
+  }
+  90%{
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+    opacity: 1;
+  }
+}
+
+/* Apply the animation to the splash screen */
+.splash-screen {
+  animation: fade-out 5.5s linear forwards;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+  /* CSS for the Table */
+
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+  color: #f2f2f2;
+}
+
+th, td {
+	text-align: left;
+	padding: 0px;
+	border: 1px solid #ddd;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+th {
+	background-color: #8b8787;
+  font-size: 25px;
+
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f27a;
+}
+
+
+
+.workEx{
+  background-color: rgba(255, 0, 0, 0.616);
+  padding-top: 50px;
+}
+
+.table-column-instruction{
+  display: none;
+}
+
+
+
+
+
+
+  @media (max-width: 768px) {
+
+
+    .navbar{
+      flex-direction:column;
+      align-items: flex-start;
+    }
+
+
+    .navbar-links ul {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    nav li {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .navbar-links li a{
+      padding: 0.5rem 0.1rem;
+    }
+    #education h2,
+    #work-experience h2 {
+      font-size: 24px;
+    }
+
+    section h1 {
+      font-size: 32px;
+    }
+
+    section ul {
+      font-size: 18px;
+    }
+
+    #splash-screen img {
+      width: 70%;
+    }
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+  
+    th {
+      text-align: center;
+    }
+  
+    td {
+      text-align: center;
+      border: none;
+    }
+  
+    tr {
+      border: 1px solid #ddd;
+      margin-bottom: 10px;
+    }
+  
+    tr:nth-child(even) {
+      background-color: transparent;
+    }
+  
+    tbody:before {
+      content: "";
+      display: block;
+      height: 10px;
+      background-color: transparent;
+    }
+    .table-column-instruction{
+      display: inline;
+    }
+  }
